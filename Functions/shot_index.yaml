@@ -1,0 +1,197 @@
+# Shot_index: this file contains all info we have collected for each shot.
+# It is formatted in YAML, that is easy to read and write for humans. See
+# https://yaml.org/ for more info and https://quickref.me/yaml for a
+# cheatsheet.
+
+# NB: currently, there is also a bunch of FRF specific data maintained in
+# frf_analysis/functions/get_frfpars_mastu.m.
+
+# Default values, that will be returned unless something else is specified
+# for a given shot.
+default:
+    ufds:
+        scaling: 0.99804
+        shift: 0.0001595
+    rba: &rba_correction
+        scaling: 1.0019
+        shift: 3.5615e-07
+
+    # this ensures plot_elm_check.m is able to find the corrections
+    rba_lower: *rba_correction
+    rba_upper: *rba_correction
+
+# The actual shot index (keys start with an s because plain numbers are not
+# valid MatLab field names).
+s48648:
+    elm_times: [0.32292, 0.32822, 0.34984, 0.37372, 0.39976]
+    ir:
+        rit:
+            scaling: 1.1321
+            shift: 0.0030518
+        riv:
+            scaling: 1.1301
+            shift: 0.0028514
+    subshot:
+        b:
+            perturbation:
+                amplitude: 0.055
+                center: -0.045
+        a:
+            perturbation:
+                amplitude: 0.03
+                center: -0.02
+
+s48651:
+    steady_state:
+        transfer_window: [0.3, 0.35]
+        Zref:
+            start: 0.01
+            end: -0.1
+
+s48652:
+    elm_times: [0.30994, 0.31695, 0.33829, 0.3482, 0.35681, 0.3735, 0.49928]
+    perturbation:
+        amplitude: 0.04
+        center: -0.03
+
+s48900:
+    elm_times: [0.34999, 0.36074, 0.37158, 0.38027, 0.38709, 0.38714]
+    ir:
+        rit:
+            scaling: 1.044
+            shift: -0.0062971
+    perturbation:
+        amplitude: 0.03
+        center: -0.02
+
+s48909:
+    elm_times: [0.3446, 0.35916, 0.35918, 0.38981, 0.39591, 0.41062, 0.42384]
+    ir:
+        rit:
+            scaling: 1.0396
+            shift: -0.0027106
+        riv:
+            scaling: 1.0086
+            shift: 0.011484
+    perturbation:
+        amplitude: 0.03
+        center: -0.02
+
+s49058:
+    elm_times: [0.30206, 0.35254, 0.41178, 0.46754, 0.47944, 0.49493]
+    ir:
+        rit:
+            scaling: 1.0211
+            shift: 0.0018746
+        riv:
+            scaling: 1.0237
+            shift: 0.0021356
+    perturbation:
+        amplitude: 0.03
+        center: -0.02
+
+s49059:
+    elm_times: [0.31299, 0.33799, 0.46727, 0.47946, 0.49936]
+    ir:
+        rit:
+            scaling: 1.0301
+            shift: 0.0015489
+        riv:
+            scaling: 1.0235
+            shift: 0.00089244
+    perturbation:
+        amplitude: 0.04
+        center: 0
+
+s49061:
+    elm_times: [0.36561, 0.39666, 0.40234, 0.4107, 0.41975]
+
+s49062:
+    elm_times: [0.30315, 0.30996, 0.31755, 0.4844, 0.48705, 0.49763]
+    ir:
+        riv:
+            scaling: 1.0256
+            shift: 0.0023098
+        rit:
+            scaling: 1.023
+            shift: 0.002048
+    subshot:
+        a:
+            perturbation:
+                amplitude: 0.01
+                center: 0
+        b:
+            perturbation:
+                amplitude: 0.02
+                center: 0
+        c:
+            perturbation:
+                amplitude: 0.03
+                center: 0
+
+s49220:
+    steady_state:
+        transfer_window: [0.3, 0.35]
+        Zref:
+            start: 0.01
+            end: -0.07
+
+s49259:
+    elm_times: [0.36327]
+    steady_state:
+        transfer_window: [0.3, 0.37]
+        Zref:
+            start: 0.01
+            end: -0.1
+
+s49260:
+    elm_times: [0.35456, 0.40105, 0.40338, 0.473]
+    ir:
+        rit:
+            scaling: 1.0233
+            shift: 0.0013998
+    subshot:
+        a:
+            perturbation:
+                amplitude: 0.04
+                center: 0
+        b:
+            perturbation:
+                amplitude: 0.05
+                center: 0
+        c:
+            perturbation:
+                amplitude: 0.06
+                center: 0
+        d:
+            perturbation:
+                amplitude: 0.04
+                center: 0
+
+s49261:
+    elm_times: [0.30223, 0.31034, 0.3195, 0.46704]
+    subshot:
+        a:
+            perturbation:
+                amplitude: 0.04
+                center: 0
+        b:
+            perturbation:
+                amplitude: 0.05
+                center: 0
+        c:
+            perturbation:
+                amplitude: 0.06
+                center: 0
+        d:
+            perturbation:
+                amplitude: 0.04
+                center: 0
+
+s49262:
+    elm_times: [0.32805, 0.33505, 0.34085]
+    steady_state:
+        transfer_window: [0.3, 0.37]
+        Zref:
+            start: 0.01
+            end: 0.07

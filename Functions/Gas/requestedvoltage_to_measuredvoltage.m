@@ -1,0 +1,5 @@
+function [measuredvoltage] = requestedvoltage_to_measuredvoltage(requestedvoltage,gascalibration)
+%MEASUREDVOLTAGE_TO_REQUESTEDVOLTAGE 
+measuredvoltage=requestedvoltage/gascalibration.measured_to_requested;
+end
+
